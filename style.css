@@ -1,17 +1,23 @@
-*{
+html, body{
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
 }
-html, body{
+#container{
     height: 100%;
     width: 100%;
-}
-#container{
-        background-color: aqua;
+    background-color:#FFEFD5;
 }
 
-p{
-
+#xd{
+    margin: 0;
+    font-size: 70px;
+    color: brown;
+    font-style: italic;
+    text-align: center;
+}
+#content{
+    height: 50%;
+    width: 50%;
 }
