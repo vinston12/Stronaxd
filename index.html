@@ -14,32 +14,79 @@
             <p>OSADZENIE</p>
 
         </div>
-
+        <div id="middle">
         <div id="video">
 
                 <section>
-                    <video controls poster="poster.png">
+                    <video poster="poster.png" id="wideo">
                         <source src="film.mp4" type="video/mp4">
                             Twoja przeglądarka nie obsługuje video.
                         </video>
-                </section>
-            <script>
-            
-        
-
-            </script>
-        
-       
+                
 
 
-        </div>
+                    </section>
+               
+             </div>
+            <div id="audio">
+             <audio src="muzyka.mp3" controls autoplay id="muzyka"></audio>
+            </div>
+                    
+        </div>     
+                
+                
+                <div id="stopka">
+                    
+                    <button id="play">odtwarzaj</button>
+                    <button id="pause">pauza</button>
+                    <button id="odn">od nowa</button>
+                    <button id="tyl">tyl</button>
+                    <button id="przod">przod</button>
+                    
 
-        <div id="stopka">
+                    <button id="bu_play">odtwarzaj muzyke</button>
+                    <button id="bu_pause">pauza muzyka</button>
+                    <button id="vol_up">glośniej</button>
+                    <button id="vol_down">ciszej</button>
 
-            <p>stopka cos tam</p>
+                </div>
+                <script>
+                 var film = document.getElementById('wideo');
+                 var odt = document.getElementById('play');
+                 var stop = document.getElementById('pause');
+                 var rep = document.getElementById('odn');
+                 var tyl = document.getElementById('tyl');
+                 var przod = document.getElementById('przod');
 
-        </div>
+                 
+                 odt.onclick = function() {film.play();}
+                 stop.onclick = function() {film.pause();}
+                 rep.onclick = function() {
+                     
+                     film.currentTime=0;
+                     film.play();
+                    }
+                 tyl.onclick = function() {film.currentTime-=10;}
+                 przod.onclick = function() {film.currentTime+=10;}
 
+
+
+                 var audio = document.getElementById('muzyka');
+                 var bu_play = document.getElementById('bu_play');
+                 var bu_pause = document.getElementById('bu_pause');
+                 var vol_up = document.getElementById('vol_up');
+                 var vol_down = document.getElementById('vol_down');
+
+                bu_play.onclick = function() {audio.play();}
+                bu_pause.onclick = function() {audio.pause();}
+                vol_up.onclick = function() {audio.volume+=0.1;}
+                vol_down.onclick = function() {audio.volume-=0.1;}
+
+             
+     
+                 </script>
+             
+                
 
     </div>
 
